@@ -9,12 +9,12 @@ st.title("My Bio")
 NAME = "Dawson Cummings"
 PROGRAM = "Computer Science"
 INTRO = (
-    "I am in my final year of studying Computer Science and while I am doing that I am a bartender at a restaurant in Englewood."
+    "I am in my final year of studying Computer Science and while I am doing that I am a bartender at a restaurant in Englewood.")
 FUN_FACTS = [
      "I love to go out and explore new places.",
      "I’m learning how to build a dataset that actively pulls from a seperate inventory system",
      "I want to build a server for my parents business so they can better track their sales and inventory.",
-])
+]
 
 def find_photo(filename="your_photo.jpg"):
      # Photo was saved in assets folder
