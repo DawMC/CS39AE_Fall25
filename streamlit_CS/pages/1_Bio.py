@@ -14,7 +14,7 @@ FUN_FACTS = [
     "I’m learning how to make more classic cocktails and then make my own spin on them.",
     "I want to build something original that I can be proud to call mine",
 ]
-PHOTO_PATH = "your_photo.jpg"  # Put a file in repo root or set a URL
+PHOTO_PATH = "assets/your_photo.jpg"  # Put a file in repo root or set a URL
 
 # ---------- Layout ----------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
