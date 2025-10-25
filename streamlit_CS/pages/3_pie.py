@@ -5,13 +5,19 @@ from pathlib import Path
 
 # ---------- Settings you can edit ----------
 PIE_TITLE = "Favorite Fruits — Pie Demo"   # change this, save, and watch the page update
-CSV_PATH = Path("data/pie_demo.csv")       # expects a header row with columns like: label,value
+# Resolve CSV path relative to this file so the page finds the data
+# regardless of the working directory used to start Streamlit.
+CSV_PATH = Path(__file__).resolve().parents[1] / "data" / "pie_demo.csv"
 LABEL_COL = "label"
 VALUE_COL = "value"
 # ------------------------------------------
 
 st.set_page_config(page_title="3_Pie", page_icon="🥧", layout="centered")
 st.title("🥧 3_Pie")
+
+# Debug info: show the absolute path we're attempting to read (helps when
+# Streamlit is started from a different working directory).
+st.caption(f"Looking for CSV at: {CSV_PATH} (exists={CSV_PATH.exists()})")
 
 # Safety checks
 if not CSV_PATH.exists():
