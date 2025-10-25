@@ -31,7 +31,9 @@ def find_photo(filename="your_photo.jpg"):
     for p in candidates:
         if p.exists():
             return str(p)
-        return None
+
+    # If none of the candidates exist, return None
+    return None
 
 photo_src = find_photo("your_photo.jpg")
 
@@ -42,10 +44,10 @@ with col1:
     if photo_src:
         st.image(photo_src, caption=NAME, use_container_width=True)
     else:
-         st.info(
-             "📷 Place `your_photo.jpg` inside an `assets/` folder at the app root "
-             "or update the path in `find_photo()`."
- )
+        st.info(
+            "📷 Place `your_photo.jpg` inside an `assets/` folder at the app root "
+            "or update the path in `find_photo()`."
+        )
 with col2:
     st.subheader(NAME)
     st.write(PROGRAM)
